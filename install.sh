@@ -31,7 +31,7 @@ if [ "$(which gcc)" = "" ]; then echo "- I need gcc. Please install it." exit; f
 if [ "$(which git)" = "" ]; then echo "- I need git. Please install it." exit; fi
 PATH=/opt/MMDVMHost:$PATH
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )" #"
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" -ne "0" ]
   then echo "- Please run as root (did you forget to prepend 'sudo' ?)"
   exit
 fi
